@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AdsQA</title>
+    <meta
+      name="description"
+      content="AdsQA: Towards Advertisement Video Understanding"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <!-- <meta property="og:image" content="./logo.png" /> -->
+    <link rel="icon" href="./assets/desktop.png">
+    <link rel="shortcut icon" href="favicon_mm.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon_mm.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="..."
+      crossorigin="anonymous"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-H9XFCMDPNS");
+    </script>
+    
+  </head>
+  <body>
+    <div style="padding-bottom: 50px">
+        <section style="
+            background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+            background-blend-mode: multiply;">
+        <div
+          class="content-wrapper title-wrapper"
+          style="flex-direction: column;"
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding-bottom: 15px;
+            "
+          >
+            <h1 style="font-size: 60px; padding-top: 0.4em; color: #2F4F4F;">AdsQA</h1>
+            <!-- <h1 style="font-size: 60px; padding-top: 0.4em; color: #2F4F4F;">GUI-Thinker</h1> -->
+            <img
+              src="assets/desktop.png"
+              style="height: 60px; padding-top: 0em; padding-left: 1em; margin-bottom:-20px;"
+            />
+          </div>
+          <h2 style="color: #2F4F4F;">Towards Advertisement Video Understanding</h2>
+          <!-- <h2 style="color: #2F4F4F;">Your Fully-Automated Desktop GUI Agent for Solving Daily Tasks.</h2> -->
+          <p style="text-align: center;margin-top:1em; color: #2F4F4F; font-size: 20px;">
+            Xinwei Long*, Kai Tian*, Guoli Jia, Che Jiang, Jingxuan Li, Sa Yang, Yang Liu, Jiaheng Ma, Kaiyan Zhang, Bowen Zhou
+          </p>
+          <p style="text-align: center;margin-top:1em; color: #2F4F4F; font-size: 20px;">
+            Tsinghua University
+          </p>
+          <div class="content-wrapper" style="margin-top: 2em;">
+            <!-- <a href="index.html">
+              <button
+                class="outline multimodal"
+                style="flex-direction: row; display: flex; justify-content: center; align-items: center;">
+                <img
+                  src="img/swellama.png"
+                  style="height: 1.3em; margin-right: 0.4em; margin-bottom: 0.3em;" />
+                  Home&nbsp;
+              </button>
+            </a> -->
+            <a href="">
+              <button class="outline multimodal">
+                <i class="fa fa-paperclip"></i> Paper&nbsp;
+              </button>
+            </a>
+            <a href="">
+              <button class="outline multimodal">
+                <i class="fa-brands fa-github"></i> Code&nbsp;
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="main-container">
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title" style="margin-bottom:0.5em">What's new with AdsQA Benchmark?</h2>
+            <p class="text-content">TL;DR:  we propose to use advertisement (ad) videos as a challenging test-bed to probe the ability of LLMs in perceiving beyond the objective physical content of common visual domain.</p>
+            <!-- <img src="assets/teaser.jpg" style="width:40%;margin:auto;display:block;"/> -->
+            <p class="text-content"> AdsQA is the first video QA benchmark for advertisement domain.
+              Our motivation is to take full advantage of the clue-rich and information-dense ad videos’ traits, e.g., marketing logic, persuasive strategies, and audience engagement. Our contribution is three-fold: <br>(1)  To our knowledge, this is the first attempt to use ad videos with well-designed tasks to evaluate LLMs. We contribute AdsQA, a challenging ad Video QA benchmark derived from 1,544 ad videos with 10,962 clips, totaling 21.1 hours, providing 5 challenging tasks. <br> (2)  We propose ReAd-R, a Deepseek-R1 styled RL model that reflects on questions, and generates answers via reward-driven optimization. <br>(3)  We benchmark 14 toptier LLMs on AdsQA, and our ReAd-R achieves the stateof-the-art outperforming strong competitors equipped with long-chain reasoning capabilities (e.g., VOT, and MCTSr) by a clear margin.</p>
+
+            <h2 class="text-title" style="margin-bottom:0.5em">Benchmark Overview</h2>
+            <img src="assets/Figure 1.png" style="width:80%;margin:auto;display:block;"/>
+            <p class="text-content">
+                <b>AdsQA</b>: Subfigs A - C: statistics & diversity, agent-involved processing pipeline, and examples.
+            </p class="text-content">
+            <!-- <h2 class="text-title" style="margin-bottom:0.5em">TBD</h2>
+            <img src="assets/agentoverview.jpg" style="width:80%;margin:auto;display:block;"/> -->
+            <h2 class="text-title">Benchmark Comparison</h2>
+            <img src="assets/table 2.png" style="width:80%;margin:auto;display:block;"/>
+            <p class="text-content" style="text-align: center;">
+              Table 1:  Quantitative comparison between AdsQA Bench and existing Video QA benchmarks.
+            </p>
+
+            <h2 class="text-title">Data Statistic</h2>      
+            <img src="assets/Figure 2.png" style="width:80%;margin:auto;display:block;">
+            <p class="text-content" style="text-align: center;">Figure 1: Statistics of Our AdsQA Bench. (a) is the distribution of video durations. (b) is the distribution of the number of clips in each video, with most videos having more than 5 scenes. (c) is the distribution of video release years. (d) is the distribution of domains, including CL (clothing), TS (transports), EN (entertainment), PS (public service), HS (household supply), HC (health care), EL (electronics), FD(food), and OT (others). (e) is the distribution of release regions of videos. (f) is the distribution of languages used in videos.</p>
+
+            <h2 class="text-title">Qualitative Analysis</h2>
+            <img src="assets/Figure 5.png" style="width:80%;margin:auto;display:block;">
+
+            <h2 class="text-title">Framework of ReAd-R</h2>
+            <img src="assets/Figure 3.png" style="width:60%;margin:auto;display:block;">
+
+            <h2 class="text-title">Case Studies</h2>
+            <img src="assets/Figure 4.png" style="width:60%;margin:auto;display:block;">
+
+            <h2 class="text-title">Experimental Results</h2>
+            <img src="assets/table 1.png" style="width:80%;margin:auto;display:block;">
+
+            <h2 class="text-title">Ablation Studies</h2>
+            <img src="assets/table 3.png" style="width:60%;margin:auto;display:block;">
+
+            <!-- <h2 class="text-title">TBD</h2>
+            <img src="assets/actorcritic.jpg" style="width:80%;margin:auto;display:block;">
+
+            <h2 class="text-title">TBD</h2>
+            <img src="assets/error1.jpg" style="width:80%;margin:auto;display:block;">
+            <img src="assets/error2.jpg" style="width:80%;margin:auto;display:block;">
+
+            <h2 class="text-title">TBD</h2>
+            <img src="assets/algorithm.jpg" style="width:80%;margin:auto;display:block;"> -->
+
+            <h2 class="text-title" style="margin-bottom:0.5em">Citation</h2>
+            <pre id="citation" style="border-color: #2F4F4F;"><code>@misc{TBD,
+      <!-- title={AdsQA: Towards Advertisement Video Understanding}, 
+      author={Xinwei Long*, Kai Tian*, Guoli Jia, Che Jiang, Jingxuan Li, Sa Yang, Yang Liu, Jiaheng Ma, Kaiyan Zhang, Bowen Zhou},
+      year={2025},
+      eprint={TBD},
+      archivePrefix={TBD},
+      primaryClass={cs.AI},
+      url={TBD},  -->
+}</code></pre>
+            <p class="text-content" style="margin-bottom: 0;">
+            <p style="line-height: 1.6667em;">
+              <b>Acknowledge:</b> TBD .
+            </p>
+            <p><b>Template Usage:</b> TBD.
+
+            </p>
+            </p>
+            <!-- <p class="text-content">
+              Correspondence to: <a href="hen">carlosej@princeton.edu</a>,
+            </p> -->
+            <!-- <div class="content-wrapper" style="display: flex; flex-direction: row; margin-top: 0.5em;">
+              <a href="https://sites.google.com/view/showlab" style="display: flex; flex-direction: row;">
+                <img src="./assets/showlab_logo.png" style="height: 3em;padding-top:0.5em;padding-right: 1em" />
+              </a>
+              <a href="https://www.nus.edu.sg/">
+                <img src="https://www.nus.edu.sg/images/default-source/base/logo.png" style="height: 3em;padding-top:0.5em;padding-right: 1em" />
+              </a> -->
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
