@@ -10,7 +10,7 @@
         <i>Keywords: Advertisement Videos, VideoQA, Multimodal Reasoning, GRPO</i>
     </p>
 </div>
-<img align="center" src="./assets/Video.png" >
+<img align="center" src="./assets/video.png" >
 ----
 
 
