@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdsQA: Towards Advertisement Video Understanding</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .section {
+      padding: 4rem 2rem;
+    }
+    .light {
+      background-color: #ffffff;
+      color: #111;
+    }
+    .dark {
+      background-color: #f3f4f6;
+      color: #111;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .tags {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      color: #111;
+      padding: 0.4rem 1rem;
+      margin: 0.2rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+    }
+    img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      background: #f9fafb;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 5px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section light">
+    <div class="container">
+      <h1>AdsQA: Towards Advertisement Video Understanding</h1>
+      <p style="text-align:center"><strong>Xinwei Long*, Kai Tian*, Guoli Jia, Che Jiang, Jingxuan Li, Sa Yang, Yang Liu, Jiaheng Ma, Kaiyan Zhang, Bowen Zhou</strong></p>
+      <div class="tags">
+        <span class="tag">📄 Paper: Coming Soon</span>
+        <span class="tag">📦 Dataset: Coming Soon</span>
+        <span class="tag">🤖 Code: Coming Soon</span>
+      </div>
+      <img src="./assets/Figure 1.png" alt="Teaser Image">
+      <p>
+        AdsQA introduces a novel benchmark for understanding advertisement videos using LLMs. These videos are clue-rich,
+        persuasion-driven, and semantically dense — ideal for evaluating cognitive-level multimodal reasoning. The benchmark consists
+        of 1,544 ad videos, 10,962 clips, and five reasoning tasks: visual concepts, emotion recognition, theme extraction,
+        persuasion strategy, and audience modeling. Our proposed model, ReAd-R, a reinforcement-learned ad reasoner, achieves
+        state-of-the-art performance across all tasks.
+      </p>
+    </div>
+  </div>
+
+  <div class="section dark">
+    <div class="container">
+      <h2 style="text-align: center;">Abstract</h2>
+      <p style="text-align: justify;">
+        Large language models (LLMs) have taken a great step towards AGI. Meanwhile, an increasing number of domainspecific problems such as math and programming boost these general-purpose models to continuously evolve via learning deeper expertise. Now is thus the time further to extend the diversity of specialized applications for knowledgeable LLMs, though collecting high quality data with unexpected and informative tasks is challenging. In this paper, we propose to use advertisement (ad) videos as a challenging test-bed to probe the ability of LLMs in perceiving beyond the objective physical content of common visual domain. Our motivation is to take full advantage of the clue-rich and information-dense ad videos’ traits, e.g., marketing logic, persuasive strategies, and audience engagement. Our contribution is three-fold, (1) To our knowledge, this is the first attempt to use ad videos with well-designed tasks to evaluate LLMs. We contribute AdsQA, a challenging ad Video QA benchmark derived from 1,544 ad videos with 10,962 clips, totaling 21.1 hours, providing 5 challenging tasks. (2) We propose ReAd-R, a Deepseek-R1 styled RL model that reflects on questions, and generates answers via reward-driven optimization. (3) We benchmark 14 toptier LLMs on AdsQA, and our ReAd-R achieves the stateof-the-art outperforming strong competitors equipped with long-chain reasoning capabilities (e.g., VOT, and MCTSr) by a clear margin.
+      </p>
+    </div>
+  </div>
+  <div class="section light">
+    <div class="container">
+      <h2>Dataset Overview & Statistics</h2>
+      <img src="./assets/Figure 2.png" alt="Teaser Image">
+      <p style="text-align: justify; font-size: 16px; line-height: 1.8em;">
+        The <strong>AdsQA benchmark</strong> introduces a comprehensive, large-scale video QA dataset specifically designed around the complex and information-rich nature of advertisement videos. It offers a diverse and well-structured data source to evaluate LLMs on implicit reasoning tasks.
+      </p>
+  
+      <ul style="font-size: 16px; line-height: 2em;">
+        <li>📼 <strong>Total Videos:</strong> 1,544 advertisement videos</li>
+        <li>🎞️ <strong>Total Clips:</strong> 10,962 video segments</li>
+        <li>🕒 <strong>Duration:</strong> 21.1 hours of curated content</li>
+        <li>🌍 <strong>Diverse Domains:</strong> Clothing, food, public service, electronics, healthcare, etc.</li>
+        <li>🌐 <strong>Language Coverage:</strong> English (dominant), Spanish, Russian, Japanese, etc.</li>
+        <li>📊 <strong>Annotation:</strong> 7,838 QA pairs across five task categories</li>
+      </ul>
+  
+      <p style="text-align: justify; font-size: 16px; line-height: 1.8em; margin-top: 30px;">
+        The dataset is constructed using a novel <strong>Role-Played Multi-Agent Annotation</strong> framework that simulates human expert behaviors—including those of marketers, visual designers, and psychologists—to automatically generate rich, specialized, and insightful QA pairs for each advertisement video.
+      </p>
+  
+    </div>
+  </div>
+  <div class="section dark">
+    <div class="container">
+      <h2>Benchmark Tasks</h2>
+      <ul>
+        <li><strong>Visual Concept Understanding (VU):</strong> Identifying characters, objects, slogans, and relationships.</li>
+        <li><strong>Emotion Recognition (ER):</strong> Inferring the emotional tone and audience impact.</li>
+        <li><strong>Theme & Message Extraction (TE):</strong> Distilling the ad’s core idea and storyline.</li>
+        <li><strong>Persuasion Strategy (PS):</strong> Analyzing rhetorical and visual techniques like humor, metaphor, etc.</li>
+        <li><strong>Audience Modeling (AM):</strong> Predicting the intended demographic and psychological profile.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section light">
+    <div class="container">
+      <h2> ReAd-R: Our Reinforced Ad Reasoner Model</h2>
+      <img src="./assets/Figure 3.png" alt="Teaser Image" style="max-width: 60%;">
+      <p style="text-align: justify; font-size: 16px; line-height: 1.8em;">
+        <strong>ReAd-R</strong> is our proposed <strong>reinforcement learning-based reasoning model</strong>, inspired by DeepSeek-R1, tailored for advertisement video understanding. Unlike traditional chain-of-thought methods, ReAd-R reflects on the ad's contents and learns from feedback to generate high-quality answers in a human-like manner.
+      </p>
+  
+      <p style="text-align: justify; font-size: 16px; line-height: 1.8em;">
+        It integrates a vision encoder, a lightweight language model, and a multi-stage policy optimization framework. By leveraging rule-based reward modeling, it avoids hallucinations and promotes precise, grounded reasoning. ReAd-R was trained with only 500 annotated ad clips and achieves <strong>state-of-the-art performance</strong> across multiple QA tasks, especially those involving implicit reasoning such as <em>persuasion strategies</em> and <em>emotion recognition</em>.
+      </p>
+  
+      <ul style="line-height: 1.8em; font-size: 16px;">
+        <li>🏋️‍♂️ <strong>Trained with GRPO (Generalized Reinforcement Policy Optimization)</strong></li>
+        <li>⚙️ <strong>Uses rule-based inclusion and exclusion rewards</strong></li>
+        <li>🧠 <strong>Outperforms GPT-4, LLaVA, and VOT in abstract VideoQA tasks</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <div class="section light">
+    <div class="container">
+      <h2>Citation</h2>
+      <pre><code>@misc{long2025adsqa,
+  title     = {AdsQA: Towards Advertisement Video Understanding},
+  author    = {Xinwei Long and Kai Tian and Guoli Jia and Che Jiang and Jingxuan Li and Sa Yang and Yang Liu and Jiaheng Ma and Kaiyan Zhang and Bowen Zhou},
+  year      = {2025},
+  note      = {Accepted at ICCV 2025},
+  howpublished = {\url{https://github.com/XiaoTiank/AdsQA}}
+}</code></pre>
+    </div> -->
+  </div>
+
+</body>
+</html>
