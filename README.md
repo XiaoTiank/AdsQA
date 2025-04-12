@@ -2,10 +2,12 @@
     <img src="./assets/project-name.png" alt="Project cover image"/> <br />
 </p>
 
+
 <div align="center">
-  🔍 <b>Paper</b>: <i><a href="#">Coming Soon</a></i> |
+<!-- 🔍 <b>Paper</b>: <i><a href="#">Coming Soon</a></i> | 
   📊 <b>Benchmark</b>: <i>Coming Soon</i> |
-  🤖 <b>Model</b>: <i>Coming Soon</i>
+  🤖 <b>Model</b>: <i>Coming Soon</i> 
+-->   
     <p align="center">
         <i>Keywords: Advertisement Videos, VideoQA, Multimodal Reasoning, GRPO</i>
     </p>
